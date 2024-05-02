@@ -1,0 +1,410 @@
+{{!-- <style>
+    header {
+    position: relative;
+    width: 100%;
+    height: 700px;
+  }
+  
+  header .header {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.719)), to(rgba(26, 12, 1, 0.788))), url("https://images.unsplash.com/photo-1519167130418-c3640bd21b7e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60") no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.719), rgba(26, 12, 1, 0.788)), url("https://images.unsplash.com/photo-1519167130418-c3640bd21b7e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60") no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 15px;
+  }
+  
+  header .header .text-ads {
+    color: white;
+    font-size: 22px;
+  }
+  
+  header .header .text-ads h2 {
+    text-align: center;
+    font-size: 40px;
+  }
+  
+  header .header .text-ads .text-btn {
+    text-align: center;
+    margin: 25px 0;
+  }
+  
+  header .header .text-ads .text-btn .btns {
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #d6d3d3;
+    color: white;
+    padding: 8px;
+    margin: 0 5px;
+    -webkit-transition: .3s all ease;
+    transition: .3s all ease;
+  }
+  
+  header .header .text-ads .text-btn .btns:hover {
+    background-color: #fa4802;
+    border: none;
+  }
+  
+  header .header .text-ads .text-btn .default-btn {
+    background-color: orangered;
+    color: white;
+    border: none;
+  }
+  
+  nav h1, nav div, nav i {
+    display: inline-block;
+  }
+  
+  nav {
+    position: fixed;
+    left: 0;
+    color: #fff;
+    height: 70px;
+    line-height: 70px;
+    width: 100%;
+    z-index: 900;
+    padding: 0 10px;
+    border-bottom: 1px solid gray;
+    -webkit-transition: 0.5s all ease;
+    transition: 0.5s all ease;
+    font-size: 22px;
+  }
+  
+  nav .site_logo {
+    letter-spacing: 4px;
+    font-weight: 400;
+    margin: 0 12px;
+    text-shadow: 3px 2px 6px rgba(70, 16, 3, 0.788);
+    pointer-events: none;
+    font-size: calc(22px * 100%);
+  }
+  
+  @media screen and (max-width: 300px) {
+    nav .site_logo {
+      font-size: 20px;
+      letter-spacing: 3px;
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+    nav .site_logo {
+      margin: 0 12px 0 0px;
+    }
+  }
+  
+  nav .list-container {
+    float: right;
+  }
+  
+  nav .list-container ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav .list-container ul li {
+    position: relative;
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+  }
+  
+  nav .list-container ul li .text {
+    display: none;
+  }
+  
+  @media screen and (max-width: 700px) {
+    nav .list-container ul li .text {
+      display: block;
+    }
+  }
+  
+  nav .list-container ul li a {
+    -webkit-transition: 0.5s all ease;
+    transition: 0.5s all ease;
+    color: #fcfafa;
+    font-weight: 500;
+    text-shadow: 0px -2px 12px #201e1e;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  nav .list-container ul li a:hover {
+    color: #ff5201;
+  }
+  
+  nav .list-container ul li.menu {
+    padding: 0;
+  }
+  
+  nav .list-container ul li.menu .dropDown {
+    position: absolute;
+    display: none;
+    min-width: 200px;
+    background-color: white;
+    border: 1px solid #dddada;
+    border-top: none;
+    -webkit-transition: 0.5s all ease;
+    transition: 0.5s all ease;
+    -webkit-animation: slide 0.5s ease forwards;
+            animation: slide 0.5s ease forwards;
+    padding: 0;
+  }
+  
+  nav .list-container ul li.menu .dropDown a {
+    margin: 0;
+    padding: 0 15px;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    display: block;
+    color: #5f5c5c;
+    text-shadow: none;
+    font-weight: 400;
+  }
+  
+  nav .list-container ul li.menu .dropDown a:hover {
+    color: #ff5201;
+    background-color: #eaeaee;
+  }
+  
+  @-webkit-keyframes slide {
+    from {
+      opacity: 0;
+      -webkit-transform: translateY(-20px) translateX(-50px);
+              transform: translateY(-20px) translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: translateY(0) translateX(-50px);
+              transform: translateY(0) translateX(-50px);
+    }
+  }
+  
+  @keyframes slide {
+    from {
+      opacity: 0;
+      -webkit-transform: translateY(-20px) translateX(-50px);
+              transform: translateY(-20px) translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: translateY(0) translateX(-50px);
+              transform: translateY(0) translateX(-50px);
+    }
+  }
+  
+  nav .list-container ul li.menu:focus .dropDown, nav .list-container ul li.menu:hover .dropDown {
+    display: block;
+    z-index: 1000;
+  }
+  
+  nav .headerBars {
+    position: relative;
+    font-size: 30px;
+    margin: 0;
+    display: none;
+  }
+  
+  nav .headerBars span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 15px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    border-radius: 25px;
+  }
+  
+  nav .headerBars span:before {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 8px 0;
+    border-radius: 25px;
+    z-index: 1000;
+  }
+  
+  nav .headerBars span:after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 4px;
+    background-color: white;
+    margin: 15px 0;
+    border-radius: 25px;
+  }
+  
+  nav .headerBars.active span {
+    position: fixed;
+    right: 0;
+    background-color: red;
+    z-index: 100;
+    -webkit-transform: rotate(50deg) translateX(10px);
+            transform: rotate(50deg) translateX(10px);
+    width: 20px;
+    z-index: 1000;
+  }
+  
+  nav .headerBars.active span:before {
+    display: none;
+  }
+  
+  nav .headerBars.active span:after {
+    position: fixed;
+    right: 0;
+    width: 20px;
+    -webkit-transform: rotate(80deg) translateX(-15px) translateY(-2px);
+            transform: rotate(80deg) translateX(-15px) translateY(-2px);
+    background-color: red;
+    z-index: 1000;
+  }
+  
+  @media screen and (max-width: 700px) {
+    nav .headerBars {
+      position: absolute;
+      right: 5px;
+      top: 25px;
+      display: block;
+      z-index: 1000;
+    }
+    nav ul {
+      z-index: 100;
+      position: fixed;
+      top: 0;
+      left: 0;
+      overflow-y: auto;
+      width: 0;
+      height: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      background: black;
+      -webkit-animation: fadein 0.5s ease forwards;
+              animation: fadein 0.5s ease forwards;
+    }
+    nav ul li a {
+      color: white;
+      text-shadow: none;
+    }
+    nav ul li .fa {
+      display: none;
+    }
+    nav ul.active {
+      width: 100%;
+    }
+  }
+  
+  nav.active {
+    background-color: white;
+    -webkit-transition: 0.5s all ease;
+    transition: 0.5s all ease;
+    color: #352620;
+    z-index: 10000;
+    border-bottom: none;
+    -webkit-box-shadow: 0px 2px 15px 0px rgba(197, 196, 196, 0.774), 0px 4px 2px -10px rgba(37, 35, 35, 0.5);
+            box-shadow: 0px 2px 15px 0px rgba(197, 196, 196, 0.774), 0px 4px 2px -10px rgba(37, 35, 35, 0.5);
+  }
+  
+  nav.active .headerBars span, nav.active .headerBars span:before, nav.active .headerBars span:after {
+    background-color: black;
+  }
+  
+  nav.active .headerBars.active span {
+    background-color: red;
+  }
+  
+  nav.active .headerBars.active span:after {
+    background-color: red;
+  }
+  
+  @media screen and (max-width: 700px) {
+    nav.active .list-container ul li a {
+      color: white;
+    }
+    nav.active .list-container ul li a:hover {
+      color: #ff5201;
+    }
+  }
+  
+  nav.active ul li a {
+    color: black;
+    text-shadow: none;
+  }
+  
+</style> --}}
+
+<header>
+<nav>
+<h1 class="site_logo">Online-Mall</h1>
+    <div class="list-container">
+    <ul class="lists">
+       
+    <li class="menu"><a>Menu</a>
+    <div class="dropDown"> 
+      <a href="blog" target="_blank">Newslette</a>
+     <a href="categories.html">Category</a>
+     <a href=" https://legitshops.netlify.app/html/product.html">Products</a>
+     <a href="showcase">shop</a>
+    <a href="services">Services</a>
+    <a href="faq">FAQS</a>
+     </div>
+    </li>
+    <li><a><i class="fa fa-shopping-basket"></i><span class="text"> Cart</span></a></li>
+    <li><a><i class="fa fa-heart-o"></i><span class="text"> Favourites</span></a></li>
+    
+    <li id="search"><a onclick="document.location.assign('./html/search.html')"><i class="fa fa-search"></i> <span class="text"> Search</span></a>
+    </li>
+    </ul>
+    <div class=" headerBars">
+        <span class="menu"></span>
+    </div>
+    </div>
+    </nav>
+<div class="header">
+
+    <div class="text-ads">
+           
+                    <h2> Shop Now</h2> 
+      <p>Get All Your Clothing Designs From Our Online Store and Get The Most Exciting Discount<br>You Can As Well Subscribe To Our Newslette To Keep Updated With Our Latest Designs.
+    </p>
+<div class="text-btn">
+                      <a href="#" target="_blank" class="default-btn btns">Get started</a> 
+                  <a href="./php/register/register.php" target="_blank" class="btns">SignUp</a>
+</div>    
+ </div>
+</div>
+</header>
